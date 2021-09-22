@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <solid android:color="@color/white"/>
+        </shape>
+    </item>
+    <item>
+        <bitmap android:src="@drawable/as_books"
+            android:gravity="center"
+            android:width="100dp"
+            android:height="100dp"/>
+    </item>
+
+
+</layer-list>

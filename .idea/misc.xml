@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/AnroidProjects/Ecommerce_admin/app/src/main/res/drawable/s_border_background.xml" value="0.17777777777777778" />
+        <entry key="..\:/AnroidProjects/Ecommerce_admin/app/src/main/res/drawable/s_border_background_2.xml" value="0.16597222222222222" />
+        <entry key="..\:/AnroidProjects/Ecommerce_admin/app/src/main/res/drawable/s_bottom_navigation_view_colored.xml" value="0.17569444444444443" />
+        <entry key="..\:/AnroidProjects/Ecommerce_admin/app/src/main/res/drawable/s_register_background.xml" value="0.16597222222222222" />
+        <entry key="..\:/AnroidProjects/Ecommerce_admin/app/src/main/res/drawable/s_shape_kind.xml" value="0.1783783783783784" />
+        <entry key="..\:/AnroidProjects/Ecommerce_admin/app/src/main/res/drawable/s_side_nav_bar.xml" value="0.1783783783783784" />
+        <entry key="..\:/AnroidProjects/Ecommerce_admin/app/src/main/res/drawable/s_slider_background.xml" value="0.1783783783783784" />
+        <entry key="..\:/AnroidProjects/Ecommerce_admin/app/src/main/res/drawable/s_splash_background.xml" value="0.1783783783783784" />
+        <entry key="..\:/AnroidProjects/Ecommerce_admin/app/src/main/res/drawable/side_nav_bar.xml" value="0.1783783783783784" />
+        <entry key="..\:/AnroidProjects/Ecommerce_admin/app/src/main/res/drawable/sl_check_up_down.xml" value="0.16319444444444445" />
+        <entry key="..\:/AnroidProjects/Ecommerce_admin/app/src/main/res/layout/activity_add_product.xml" value="0.168359375" />
+        <entry key="..\:/AnroidProjects/Ecommerce_admin/app/src/main/res/layout/activity_edit_product.xml" value="0.168359375" />
+        <entry key="..\:/AnroidProjects/Ecommerce_admin/app/src/main/res/layout/activity_main.xml" value="0.14375" />
+        <entry key="..\:/AnroidProjects/Ecommerce_admin/app/src/main/res/layout/activity_order_deatils.xml" value="0.14583333333333334" />
+        <entry key="..\:/AnroidProjects/Ecommerce_admin/app/src/main/res/layout/activity_otp_verification.xml" value="0.19" />
+        <entry key="..\:/AnroidProjects/Ecommerce_admin/app/src/main/res/layout/activity_product_detail.xml" value="0.14583333333333334" />
+        <entry key="..\:/AnroidProjects/Ecommerce_admin/app/src/main/res/layout/activity_profile_menu.xml" value="0.13402777777777777" />
+        <entry key="..\:/AnroidProjects/Ecommerce_admin/app/src/main/res/layout/activity_register.xml" value="0.168359375" />
+        <entry key="..\:/AnroidProjects/Ecommerce_admin/app/src/main/res/layout/activity_taking_details.xml" value="0.168359375" />
+        <entry key="..\:/AnroidProjects/Ecommerce_admin/app/src/main/res/layout/activity_withdrawal.xml" value="0.16" />
+        <entry key="..\:/AnroidProjects/Ecommerce_admin/app/src/main/res/layout/ar_add_product_lay_1.xml" value="0.168359375" />
+        <entry key="..\:/AnroidProjects/Ecommerce_admin/app/src/main/res/layout/ar_add_product_lay_2.xml" value="0.18" />
+        <entry key="..\:/AnroidProjects/Ecommerce_admin/app/src/main/res/layout/ar_add_product_lay_3.xml" value="0.21" />
+        <entry key="..\:/AnroidProjects/Ecommerce_admin/app/src/main/res/layout/ar_add_product_lay_4.xml" value="0.168359375" />
+        <entry key="..\:/AnroidProjects/Ecommerce_admin/app/src/main/res/layout/ar_add_product_lay_5.xml" value="0.25" />
+        <entry key="..\:/AnroidProjects/Ecommerce_admin/app/src/main/res/layout/ar_fees_profit_lay.xml" value="0.14375" />
+        <entry key="..\:/AnroidProjects/Ecommerce_admin/app/src/main/res/layout/ar_myaccount_1_lay.xml" value="0.13819444444444445" />
+        <entry key="..\:/AnroidProjects/Ecommerce_admin/app/src/main/res/layout/ar_order_showcase_lay.xml" value="0.168359375" />
+        <entry key="..\:/AnroidProjects/Ecommerce_admin/app/src/main/res/layout/ar_payment_lay_1.xml" value="0.2" />
+        <entry key="..\:/AnroidProjects/Ecommerce_admin/app/src/main/res/layout/ar_payment_lay_2.xml" value="0.168359375" />
+        <entry key="..\:/AnroidProjects/Ecommerce_admin/app/src/main/res/layout/ar_payment_lay_3.xml" value="0.25" />
+        <entry key="..\:/AnroidProjects/Ecommerce_admin/app/src/main/res/layout/ar_product_detail_lay_1.xml" value="0.22" />
+        <entry key="..\:/AnroidProjects/Ecommerce_admin/app/src/main/res/layout/ar_product_detail_lay_2.xml" value="0.168359375" />
+        <entry key="..\:/AnroidProjects/Ecommerce_admin/app/src/main/res/layout/ar_product_detail_lay_3.xml" value="0.168359375" />
+        <entry key="..\:/AnroidProjects/Ecommerce_admin/app/src/main/res/layout/ar_product_details_lay.xml" value="0.168359375" />
+        <entry key="..\:/AnroidProjects/Ecommerce_admin/app/src/main/res/layout/ar_product_image_lay.xml" value="0.12916666666666668" />
+        <entry key="..\:/AnroidProjects/Ecommerce_admin/app/src/main/res/layout/ar_rating_lay.xml" value="0.168359375" />
+        <entry key="..\:/AnroidProjects/Ecommerce_admin/app/src/main/res/layout/ar_returned_order_lay.xml" value="0.168359375" />
+        <entry key="..\:/AnroidProjects/Ecommerce_admin/app/src/main/res/layout/ar_withdrawal_lay_1.xml" value="0.168359375" />
+        <entry key="..\:/AnroidProjects/Ecommerce_admin/app/src/main/res/layout/ar_withdrawal_lay_2.xml" value="0.168359375" />
+        <entry key="..\:/AnroidProjects/Ecommerce_admin/app/src/main/res/layout/ar_withdrawal_lay_3.xml" value="0.168359375" />
+        <entry key="..\:/AnroidProjects/Ecommerce_admin/app/src/main/res/layout/blank_fragment.xml" value="0.168359375" />
+        <entry key="..\:/AnroidProjects/Ecommerce_admin/app/src/main/res/layout/fragment_all_product.xml" value="0.22" />
+        <entry key="..\:/AnroidProjects/Ecommerce_admin/app/src/main/res/layout/fragment_dashboard.xml" value="0.13472222222222222" />
+        <entry key="..\:/AnroidProjects/Ecommerce_admin/app/src/main/res/layout/fragment_delivered_order.xml" value="0.14583333333333334" />
+        <entry key="..\:/AnroidProjects/Ecommerce_admin/app/src/main/res/layout/fragment_home.xml" value="0.14375" />
+        <entry key="..\:/AnroidProjects/Ecommerce_admin/app/src/main/res/layout/fragment_new_order.xml" value="0.13819444444444445" />
+        <entry key="..\:/AnroidProjects/Ecommerce_admin/app/src/main/res/layout/fragment_payment.xml" value="0.168359375" />
+        <entry key="..\:/AnroidProjects/Ecommerce_admin/app/src/main/res/layout/fragment_shipped_order.xml" value="0.1" />
+        <entry key="..\:/AnroidProjects/Ecommerce_admin/app/src/main/res/layout/fragment_stock_low.xml" value="0.11875" />
+        <entry key="..\:/AnroidProjects/Ecommerce_admin/app/src/main/res/layout/fragment_stock_out.xml" value="0.11875" />
+        <entry key="..\:/AnroidProjects/Ecommerce_admin/app/src/main/res/layout/fragment_take_bank_details.xml" value="0.21" />
+        <entry key="..\:/AnroidProjects/Ecommerce_admin/app/src/main/res/layout/fragment_take_business.xml" value="0.168359375" />
+        <entry key="..\:/AnroidProjects/Ecommerce_admin/app/src/main/res/layout/fragment_ui_dashbord.xml" value="0.168359375" />
+        <entry key="..\:/AnroidProjects/Ecommerce_admin/app/src/main/res/layout/le_order_item.xml" value="0.2" />
+        <entry key="..\:/AnroidProjects/Ecommerce_admin/app/src/main/res/layout/le_payment_histor_item.xml" value="0.22" />
+        <entry key="..\:/AnroidProjects/Ecommerce_admin/app/src/main/res/layout/le_product_horizontal_item.xml" value="0.22" />
+        <entry key="..\:/AnroidProjects/Ecommerce_admin/app/src/main/res/layout/le_spinner_item.xml" value="0.168359375" />
+        <entry key="..\:/AnroidProjects/Ecommerce_admin/app/src/main/res/menu/bottom_nav_menu.xml" value="0.14375" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

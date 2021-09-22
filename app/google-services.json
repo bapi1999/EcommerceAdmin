@@ -1,0 +1,98 @@
+{
+  "project_info": {
+    "project_number": "912329501403",
+    "firebase_url": "https://ecommerceapp2-891bc-default-rtdb.firebaseio.com",
+    "project_id": "ecommerceapp2-891bc",
+    "storage_bucket": "ecommerceapp2-891bc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:912329501403:android:ec40914192bed9d3187afe",
+        "android_client_info": {
+          "package_name": "com.example.ecommerce2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "912329501403-qieec24lnscl4dqevcni8e72s7vdp221.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZYOAxeBSDmjFDjWMaA5XDq30Lmv6wE34"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "912329501403-qieec24lnscl4dqevcni8e72s7vdp221.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:912329501403:android:e10c856a0f7a3de3187afe",
+        "android_client_info": {
+          "package_name": "com.example.ecommerce_admin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "912329501403-qieec24lnscl4dqevcni8e72s7vdp221.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZYOAxeBSDmjFDjWMaA5XDq30Lmv6wE34"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "912329501403-qieec24lnscl4dqevcni8e72s7vdp221.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:912329501403:android:233b59c03af0e04d187afe",
+        "android_client_info": {
+          "package_name": "com.example.foodfun"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "912329501403-qieec24lnscl4dqevcni8e72s7vdp221.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZYOAxeBSDmjFDjWMaA5XDq30Lmv6wE34"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "912329501403-qieec24lnscl4dqevcni8e72s7vdp221.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
