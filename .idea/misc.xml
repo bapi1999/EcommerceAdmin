@@ -37,6 +37,8 @@
         <entry key="..\:/AnroidProjects/Ecommerce_admin/app/src/main/res/layout/ar_product_detail_lay_1.xml" value="0.22" />
         <entry key="..\:/AnroidProjects/Ecommerce_admin/app/src/main/res/layout/ar_product_detail_lay_2.xml" value="0.168359375" />
         <entry key="..\:/AnroidProjects/Ecommerce_admin/app/src/main/res/layout/ar_product_detail_lay_3.xml" value="0.168359375" />
+        <entry key="..\:/AnroidProjects/Ecommerce_admin/app/src/main/res/layout/ar_product_detail_lay_4.xml" value="0.21" />
+        <entry key="..\:/AnroidProjects/Ecommerce_admin/app/src/main/res/layout/ar_product_detail_lay_5.xml" value="0.168359375" />
         <entry key="..\:/AnroidProjects/Ecommerce_admin/app/src/main/res/layout/ar_product_details_lay.xml" value="0.168359375" />
         <entry key="..\:/AnroidProjects/Ecommerce_admin/app/src/main/res/layout/ar_product_image_lay.xml" value="0.12916666666666668" />
         <entry key="..\:/AnroidProjects/Ecommerce_admin/app/src/main/res/layout/ar_rating_lay.xml" value="0.168359375" />
@@ -60,6 +62,8 @@
         <entry key="..\:/AnroidProjects/Ecommerce_admin/app/src/main/res/layout/le_order_item.xml" value="0.2" />
         <entry key="..\:/AnroidProjects/Ecommerce_admin/app/src/main/res/layout/le_payment_histor_item.xml" value="0.22" />
         <entry key="..\:/AnroidProjects/Ecommerce_admin/app/src/main/res/layout/le_product_horizontal_item.xml" value="0.22" />
+        <entry key="..\:/AnroidProjects/Ecommerce_admin/app/src/main/res/layout/le_product_review_item.xml" value="0.25" />
+        <entry key="..\:/AnroidProjects/Ecommerce_admin/app/src/main/res/layout/le_product_update_item.xml" value="0.21" />
         <entry key="..\:/AnroidProjects/Ecommerce_admin/app/src/main/res/layout/le_spinner_item.xml" value="0.168359375" />
         <entry key="..\:/AnroidProjects/Ecommerce_admin/app/src/main/res/menu/bottom_nav_menu.xml" value="0.14375" />
       </map>

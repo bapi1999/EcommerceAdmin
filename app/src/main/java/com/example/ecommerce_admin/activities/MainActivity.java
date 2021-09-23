@@ -165,10 +165,12 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-//        if (navView.getSelectedItemId() == R.id.navigation_uidashbord){
-//            super.onBackPressed();
-//            finish();
-//        }else
+        if (navView.getSelectedItemId() == R.id.navigation_uidashbord){
+            super.onBackPressed();
+            finish();
+        }else{
+            navView.setSelectedItemId(R.id.navigation_uidashbord);
+        }
         super.onBackPressed();
     }
 }

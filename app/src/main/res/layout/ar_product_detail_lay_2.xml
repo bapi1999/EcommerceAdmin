@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:text="Description"
-        android:textColor="@color/black"
+        android:textColor="@color/deep_gray"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -32,10 +32,13 @@
 
     <TextView
         android:id="@+id/product_details_text"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="35dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="8dp"
         android:text="@string/lore_ipsum"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/divider3" />

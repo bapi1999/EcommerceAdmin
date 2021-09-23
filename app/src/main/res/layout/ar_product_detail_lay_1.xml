@@ -93,6 +93,7 @@
         android:layout_marginStart="32dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="@+id/product_state"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/product_state">
 
         <TextView
@@ -103,13 +104,13 @@
             android:layout_margin="2dp"
             android:background="@drawable/s_bigslider_background"
             android:backgroundTint="@color/successGreen"
+            android:drawableRight="@drawable/ic_star"
             android:paddingStart="5dp"
             android:paddingEnd="5dp"
             android:text="0.0"
             android:textColor="@color/white"
             android:textSize="12sp"
             android:textStyle="bold"
-            android:drawableRight="@drawable/ic_star"
             app:drawableTint="@color/white" />
 
         <TextView

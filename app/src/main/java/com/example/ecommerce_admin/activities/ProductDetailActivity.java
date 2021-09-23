@@ -4,6 +4,8 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.content.res.AppCompatResources;
 import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
 import android.app.Dialog;
@@ -18,13 +20,18 @@ import android.widget.Toast;
 
 import com.example.ecommerce_admin.R;
 import com.example.ecommerce_admin.adapters.ProductImgAdapter;
+import com.example.ecommerce_admin.adapters.ProductReviewAdapter;
+import com.example.ecommerce_admin.models.ProductReviewModel;
 import com.example.ecommerce_admin.ui.products.AllProductFragment;
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.tabs.TabLayout;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.Query;
+import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -42,14 +49,18 @@ public class ProductDetailActivity extends AppCompatActivity {
     //2nd layout
     private TextView productDetailsText;
     //3rd layout
+    private TextView writerName,publisher,bookLanguage,printDate,bookCondition,pageCount,isbnNo,bookDimension;
 
-    //4th layout //rating
+    //4th layout
+    private TextView categoryText,tagsText;
+    // rating
 
     public static LinearLayout rateNowContainer;
     private TextView average_rating, totalRating;
     private LinearLayout ratings_number_container, rating_bar_container;
     public static int initialRating;
     private int mainPosition = -1;
+    private RecyclerView reviewRecyclerView ;
 
 
     // main layout
@@ -67,11 +78,11 @@ public class ProductDetailActivity extends AppCompatActivity {
 
     private DocumentSnapshot documentSnapshot;
     private TextView sellingPrice,commissionFee,deliverycharge, estmdProfit;
-//    private String totalProduct;
-//    private int index;
-//    public static MenuItem cartItem;
-//
-//    public static Activity productDetailsActivity;
+
+    public List<ProductReviewModel> reviewModelsList = new ArrayList<ProductReviewModel>();
+    private ProductReviewAdapter adapter;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -94,11 +105,26 @@ public class ProductDetailActivity extends AppCompatActivity {
         stockQuantity=findViewById(R.id.stock_quantity);
         stockState=findViewById(R.id.stockState);
 
+
+        writerName = findViewById(R.id.writer_name);
+        publisher = findViewById(R.id.publisherName);
+        bookLanguage = findViewById(R.id.bookLanguage);
+        printDate = findViewById(R.id.printDate);
+        bookCondition = findViewById(R.id.bookCondition);
+        pageCount = findViewById(R.id.pageCount);
+        isbnNo = findViewById(R.id.isbnNumber);
+        bookDimension = findViewById(R.id.bookDimension);
+
+        categoryText = findViewById(R.id.categoryText);
+        tagsText = findViewById(R.id.tagsText);
+
+
         average_rating = findViewById(R.id.average_rating_text);
         totalRating = findViewById(R.id.totalRating);
-
         ratings_number_container = findViewById(R.id.ratings_number_container);
         rating_bar_container = findViewById(R.id.rating_bar_containter);
+        reviewRecyclerView = findViewById(R.id.review_recycler);
+
         editBtn = findViewById(R.id.edit_product_btn);
         deleteBtn = findViewById(R.id.delete_product_btn);
         btnContainer = findViewById(R.id.linearLayout4);
@@ -122,6 +148,7 @@ public class ProductDetailActivity extends AppCompatActivity {
         loadingDialog.show();
         //loading dialog
 
+
         firebaseFirestore = FirebaseFirestore.getInstance();
         final List<String> productImgList = new ArrayList<>();
         productID = getIntent().getStringExtra("product_ID");
@@ -141,11 +168,7 @@ public class ProductDetailActivity extends AppCompatActivity {
 //        totalProduct = getIntent().getStringExtra("listSize");
 //        index = getIntent().getIntExtra("index",-1);
 
-
-
-
-
-
+        getReview();
 //TODO- Main query###################################################################################################
 
         firebaseFirestore.collection("PRODUCTS").document(productID)
@@ -162,16 +185,54 @@ public class ProductDetailActivity extends AppCompatActivity {
 
                     String avgRating = documentSnapshot.get("rating_avg").toString();
                     String totalRatinginput = documentSnapshot.get("rating_total").toString();
-
-                    productName.setText(documentSnapshot.get("book_title").toString());
-                    mini_avg_rating.setText(avgRating);
-
-                    mini_total_ratings.setText(new StringBuilder().append("(").append(totalRatinginput).append(") ratings").toString());
                     String price = documentSnapshot.get("price_Rs").toString();
+                    String categoryString = "";
+                    String tagsString = "";
+                    List<String> categoryList = (List<String>) documentSnapshot.get("categories");
+                    List<String> tagList = (List<String>) documentSnapshot.get("tags");
+                    for (String catrgorys : categoryList){
+                        categoryString += catrgorys+",  ";
+                    }
+
+                    for (String tag : tagList){
+                        tagsString +="#"+tag+"  ";
+                    }
+
+                    int stock_quantity = Math.toIntExact(documentSnapshot.getLong("in_stock_quantity"));
+
+                    productName.setText(documentSnapshot.getString("book_title"));
+                    productState.setText(documentSnapshot.getString("book_state"));
+
+                    if (stock_quantity>3){
+                        stockState.setText("in stock");
+                    }else if(stock_quantity<=3 && stock_quantity>0){
+                        stockState.setText("low");
+                    }else {
+                        stockState.setText("Out");
+                    }
+
+                    stockQuantity.setText(new StringBuilder().append(stock_quantity).append("product availabe").toString());
+
+                    mini_avg_rating.setText(avgRating);
+                    mini_total_ratings.setText(new StringBuilder().append("(").append(totalRatinginput).append(") ratings").toString());
+
                     product_price.setText(new StringBuilder().append("Rs.").append(price).append("/-").toString());
                     sellingPrice.setText("Rs." + price+ "/-");
+
                     productDetailsText.setText(documentSnapshot.get("book_details").toString());
-//                    int stock_quantity = Integer.parseInt(documentSnapshot.get("stock_quantity").toString());
+
+                    writerName.setText(documentSnapshot.getString("book_writer"));
+                    publisher.setText(documentSnapshot.getString("book_publisher"));
+                    bookLanguage.setText(documentSnapshot.getString("book_language"));
+                    printDate.setText(documentSnapshot.getString("book_printed_ON"));
+                    bookCondition.setText(documentSnapshot.getString("book_condition"));
+                    pageCount.setText(documentSnapshot.get("book_pageCount").toString());
+                    isbnNo.setText(documentSnapshot.getString("book_ISBN"));
+//                    bookDimension.setText(documentSnapshot.getString("")); // todo BOOK DIMENSION NOT ADDED
+
+
+                    categoryText.setText(categoryString);
+                    tagsText.setText(tagsString);
 
                     average_rating.setText(avgRating);
                     totalRating.setText(totalRatinginput);
@@ -190,49 +251,6 @@ public class ProductDetailActivity extends AppCompatActivity {
                     loadingDialog.dismiss();
                     ProfitCalculator(price);
 
-
-//todo = Edit btn ##################################################################
-                    editBtn.setOnClickListener(new View.OnClickListener()  {
-                        @Override
-                        public void onClick(View view) {
-
-                            Map<String, Object> addProduct = new HashMap<>();
-
-
-                            firebaseFirestore.collection("USERS").document(currentUser.getUid())
-                                    .collection("USER_DATA").document("MY_CART")
-                                    .update(addProduct).addOnCompleteListener(new OnCompleteListener<Void>() {
-                                @Override
-                                public void onComplete(@NonNull Task<Void> task) {
-                                    if (task.isSuccessful()) {
-
-
-                                    } else {
-                                        String error = task.getException().getMessage();
-                                        Toast.makeText(ProductDetailActivity.this, error, Toast.LENGTH_SHORT).show();
-                                    }
-                                }
-                            });
-                        }
-                    });
-
-                    deleteBtn.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-//                            if (cameFrom.equals("NOTIFICATION") || cameFrom.equals("SEARCH") ){
-//                                getDeleteBtnPositon(productID);
-//                            }else if(cameFrom.equals("PRODUCT_LIST") ){
-//                                mainPosition = getIntent().getIntExtra("position",-1);
-//
-//                            }
-                            Toast.makeText(ProductDetailActivity.this, mainPosition+" position", Toast.LENGTH_SHORT).show();
-
-
-                        }
-                    });
-
-
-
                 } else {
                     loadingDialog.dismiss();
                     String error = task.getException().getMessage();
@@ -241,8 +259,73 @@ public class ProductDetailActivity extends AppCompatActivity {
             }
         });
 
+        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+        layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
+        reviewRecyclerView.setLayoutManager(layoutManager);
+
+        adapter = new ProductReviewAdapter(reviewModelsList);
+        reviewRecyclerView.setAdapter(adapter);
+
+
 
     }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+
+
+
+        //todo = Edit btn ##################################################################
+        editBtn.setOnClickListener(new View.OnClickListener()  {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(ProductDetailActivity.this, mainPosition+" position", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
+        deleteBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Toast.makeText(ProductDetailActivity.this, mainPosition+" position", Toast.LENGTH_SHORT).show();
+
+
+            }
+        });
+
+    }
+
+    private void getReview(){
+        firebaseFirestore.collection("PRODUCTS").document(productID)
+                .collection("PRODUCT_REVIEW")
+                .orderBy("priority", Query.Direction.DESCENDING).limit(7)
+                .get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                if (task.isSuccessful()){
+                    for (DocumentSnapshot documentSnapshot : task.getResult()){
+                        String buyerId = documentSnapshot.getString("buyer_ID");
+                        String buyerName=documentSnapshot.getString("buyer_name");
+                        int rating= Math.toIntExact(documentSnapshot.getLong("rating"));
+                        String review =documentSnapshot.getString("review");
+                        String reviewDate = String.valueOf(documentSnapshot.getDate("review_Date"));
+
+                        reviewModelsList.add( new ProductReviewModel(buyerId,buyerName,rating,review,reviewDate));
+                       adapter.notifyDataSetChanged();
+
+                    }
+                }else {
+
+                }
+
+
+            }
+        });
+    }
+
     private Integer getDeleteBtnPositon(String productId){
         int position = 0;
         for (int i = 0;i< AllProductFragment.productlist.size();i++){
@@ -278,4 +361,8 @@ public class ProductDetailActivity extends AppCompatActivity {
         estmdProfit.setText("Rs. "+result1);
 
     }
+
+
+
+    //categories // tags
 }

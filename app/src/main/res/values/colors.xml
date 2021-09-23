@@ -13,10 +13,12 @@
     <color name="lemon">#FFEB3B</color>
     <color name="disabled">#535353</color>
     <color name="successGreen">#0DCB62</color>
+    <color name="ratingGreen">#0AAE59</color>
     <color name="brikeRed">#EF2929</color>
     <color name="orange">#FF5722</color>
     <color name="light_gray">#E8E6E6</color>
     <color name="viewAll">#0288D1</color>
+    <color name="blueLink">#0199FF</color>
     <color name="red">#FF0026</color>
     <color name="gray">#B1B0B0</color>
     <color name="deep_gray">#616161</color>

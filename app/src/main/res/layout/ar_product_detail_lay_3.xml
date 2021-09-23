@@ -15,16 +15,13 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:text="Details"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <View
         android:id="@+id/divider69"
         android:layout_width="match_parent"
-        android:layout_height="2dp"
+        android:layout_height="1dp"
         android:layout_marginTop="8dp"
         android:background="?android:attr/listDivider"
         app:layout_constraintEnd_toEndOf="parent"
@@ -57,18 +54,18 @@
                 android:layout_margin="5dp"
                 android:text="Writer name :"
                 android:textColor="@color/deep_gray"
-                android:textSize="17sp" />
+                android:textSize="15sp" />
 
             <TextView
-                android:id="@+id/textView79"
+                android:id="@+id/writer_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:ellipsize="end"
                 android:maxLines="1"
                 android:text="PK ghose"
-                android:textColor="@color/deep_gray"
-                android:textSize="17sp" />
+                android:textColor="@color/black"
+                android:textSize="15sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -82,18 +79,18 @@
                 android:layout_margin="5dp"
                 android:text="Publisher :"
                 android:textColor="@color/deep_gray"
-                android:textSize="17sp" />
+                android:textSize="15sp" />
 
             <TextView
-                android:id="@+id/textView80"
+                android:id="@+id/publisherName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:ellipsize="end"
                 android:maxLines="1"
                 android:text="Ananda publisher"
-                android:textColor="@color/deep_gray"
-                android:textSize="17sp" />
+                android:textColor="@color/black"
+                android:textSize="15sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -107,18 +104,18 @@
                 android:layout_margin="5dp"
                 android:text="Language :"
                 android:textColor="@color/deep_gray"
-                android:textSize="17sp" />
+                android:textSize="15sp" />
 
             <TextView
-                android:id="@+id/textView81"
+                android:id="@+id/bookLanguage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:ellipsize="end"
                 android:maxLines="1"
                 android:text="English"
-                android:textColor="@color/deep_gray"
-                android:textSize="17sp" />
+                android:textColor="@color/black"
+                android:textSize="15sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -132,18 +129,18 @@
                 android:layout_margin="5dp"
                 android:text="Print date :"
                 android:textColor="@color/deep_gray"
-                android:textSize="17sp" />
+                android:textSize="15sp" />
 
             <TextView
-                android:id="@+id/textView82"
+                android:id="@+id/printDate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:ellipsize="end"
                 android:maxLines="1"
                 android:text="PK ghose"
-                android:textColor="@color/deep_gray"
-                android:textSize="17sp" />
+                android:textColor="@color/black"
+                android:textSize="15sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -157,18 +154,18 @@
                 android:layout_margin="5dp"
                 android:text="Book contion :"
                 android:textColor="@color/deep_gray"
-                android:textSize="17sp" />
+                android:textSize="15sp" />
 
             <TextView
-                android:id="@+id/textView83"
+                android:id="@+id/bookCondition"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:ellipsize="end"
                 android:maxLines="1"
                 android:text="Almost new"
-                android:textColor="@color/deep_gray"
-                android:textSize="17sp" />
+                android:textColor="@color/black"
+                android:textSize="15sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -182,18 +179,18 @@
                 android:layout_margin="5dp"
                 android:text="Page count :"
                 android:textColor="@color/deep_gray"
-                android:textSize="17sp" />
+                android:textSize="15sp" />
 
             <TextView
-                android:id="@+id/textView84"
+                android:id="@+id/pageCount"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:ellipsize="end"
                 android:maxLines="1"
                 android:text="458"
-                android:textColor="@color/deep_gray"
-                android:textSize="17sp" />
+                android:textColor="@color/black"
+                android:textSize="15sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -207,18 +204,18 @@
                 android:layout_margin="5dp"
                 android:text="ISBN No :"
                 android:textColor="@color/deep_gray"
-                android:textSize="17sp" />
+                android:textSize="15sp" />
 
             <TextView
-                android:id="@+id/textView85"
+                android:id="@+id/isbnNumber"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:ellipsize="end"
                 android:maxLines="1"
                 android:text="PK ghose"
-                android:textColor="@color/deep_gray"
-                android:textSize="17sp" />
+                android:textColor="@color/black"
+                android:textSize="15sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -232,18 +229,18 @@
                 android:layout_margin="5dp"
                 android:text="Dimension(wxhxl) :"
                 android:textColor="@color/deep_gray"
-                android:textSize="17sp" />
+                android:textSize="15sp" />
 
             <TextView
-                android:id="@+id/textView86"
+                android:id="@+id/bookDimension"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:ellipsize="end"
                 android:maxLines="1"
                 android:text="24 x 84 x 31"
-                android:textColor="@color/deep_gray"
-                android:textSize="17sp" />
+                android:textColor="@color/black"
+                android:textSize="15sp" />
         </LinearLayout>
 
 
